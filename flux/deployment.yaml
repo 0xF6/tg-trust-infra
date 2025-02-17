@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trust-service
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: trust-service
+  template:
+    metadata:
+      labels:
+        app: trust-service
+    spec:
+      containers:
+      - name: trust-service
+        image: narea/trust-service:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Production"
+        - name: DOTNET_SYSTEM_GLOBALIZATION_INVARIANT
+          value: "1"
+        resources:
+          requests:
+            memory: "400Mi"
+            cpu: "240m"
+          limits:
+            memory: "800Mi"
+            cpu: "500m"
+        readinessProbe:
+          httpGet:
+            path: "/health"
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: "/health"
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 20
+      imagePullSecrets:
+      - name: dockerhub-secret
