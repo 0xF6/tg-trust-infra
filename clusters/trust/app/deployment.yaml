@@ -24,13 +24,13 @@ spec:
               value: "Production"
             - name: DOTNET_SYSTEM_GLOBALIZATION_INVARIANT
               value: "1"
-          resources:
-            requests:
-              memory: "400Mi"
-              cpu: "240m"
-            limits:
-              memory: "800Mi"
-              cpu: "500m"
+#          resources:
+#            requests:
+#              memory: "400Mi"
+#              cpu: "240m"
+#            limits:
+#              memory: "800Mi"
+#              cpu: "500m"
           readinessProbe:
             httpGet:
               path: "/health"
