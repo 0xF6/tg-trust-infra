@@ -16,7 +16,7 @@ spec:
 
       containers:
         - name: trust-service
-          image: narea/trust-service:1.0.0
+          image: narea/trust-service:1.0.0 # {"$imagepolicy": "flux-system:trust-service"}
           ports:
             - containerPort: 8080
           env:
