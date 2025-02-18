@@ -13,10 +13,9 @@ spec:
       labels:
         app: trust-service
     spec:
-
       containers:
         - name: trust-service
-          image: narea/trust-service:1.0.0 # {"$imagepolicy": "flux-system:trust-policy"}
+          image: narea/trust-service:1.0.221 # {"$imagepolicy": "flux-system:trust-policy"}
           ports:
             - containerPort: 8080
           env:
@@ -24,13 +23,13 @@ spec:
               value: "Production"
             - name: DOTNET_SYSTEM_GLOBALIZATION_INVARIANT
               value: "1"
-#          resources:
-#            requests:
-#              memory: "400Mi"
-#              cpu: "240m"
-#            limits:
-#              memory: "800Mi"
-#              cpu: "500m"
+              #          resources:
+              #            requests:
+              #              memory: "400Mi"
+              #              cpu: "240m"
+              #            limits:
+              #              memory: "800Mi"
+              #              cpu: "500m"
           readinessProbe:
             httpGet:
               path: "/health"
