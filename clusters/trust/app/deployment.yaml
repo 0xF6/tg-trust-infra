@@ -13,6 +13,8 @@ spec:
       labels:
         app: trust-service
     spec:
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: trust-service
           image: narea/trust-service:1.0.221 # {"$imagepolicy": "flux-system:trust-policy"}
@@ -30,17 +32,17 @@ spec:
               #            limits:
               #              memory: "800Mi"
               #              cpu: "500m"
-#          readinessProbe:
-#            httpGet:
-#              path: "/health"
-#              port: 8080
-#            initialDelaySeconds: 5
-#            periodSeconds: 10
-#          livenessProbe:
-#            httpGet:
-#              path: "/health"
-#              port: 8080
-#            initialDelaySeconds: 10
-#            periodSeconds: 20
+      #          readinessProbe:
+      #            httpGet:
+      #              path: "/health"
+      #              port: 8080
+      #            initialDelaySeconds: 5
+      #            periodSeconds: 10
+      #          livenessProbe:
+      #            httpGet:
+      #              path: "/health"
+      #              port: 8080
+      #            initialDelaySeconds: 10
+      #            periodSeconds: 20
       imagePullSecrets:
         - name: regcred
