@@ -1,10 +1,10 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: ImageRepository
-metadata:
-  name: trust-service
-  namespace: flux-system
-spec:
-  image: narea/trust-service
-  interval: 1m
-  secretRef:
-    name: dockerhub-secret
+#apiVersion: source.toolkit.fluxcd.io/v1beta2
+#kind: ImageRepository
+#metadata:
+#  name: trust-service
+#  namespace: flux-system
+#spec:
+#  image: narea/trust-service
+#  interval: 1m
+#  secretRef:
+#    name: dockerhub-secret

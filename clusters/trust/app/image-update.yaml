@@ -1,11 +1,11 @@
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImagePolicy
-metadata:
-  name: trust-service
-  namespace: flux-system
-spec:
-  imageRepositoryRef:
-    name: trust-service
-  policy:
-    semver:
-      range: ">=1.0.0"
+#apiVersion: image.toolkit.fluxcd.io/v1beta1
+#kind: ImagePolicy
+#metadata:
+#  name: trust-service
+#  namespace: flux-system
+#spec:
+#  imageRepositoryRef:
+#    name: trust-service
+#  policy:
+#    semver:
+#      range: ">=1.0.0"

@@ -1,17 +1,17 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: trust-service-ingress
-  namespace: default
-spec:
-  rules:
-  - host: trust.0xf6.moe
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: trust-service
-            port:
-              number: 80
+#apiVersion: networking.k8s.io/v1
+#kind: Ingress
+#metadata:
+#  name: trust-service-ingress
+#  namespace: default
+#spec:
+#  rules:
+#  - host: trust.0xf6.moe
+#    http:
+#      paths:
+#      - path: /
+#        pathType: Prefix
+#        backend:
+#          service:
+#            name: trust-service
+#            port:
+#              number: 80
