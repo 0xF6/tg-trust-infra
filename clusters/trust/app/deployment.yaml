@@ -17,7 +17,7 @@ spec:
       dnsPolicy: ClusterFirstWithHostNet
       containers:
         - name: trust-service
-          image: narea/trust-service:1.0.223 # {"$imagepolicy": "flux-system:trust-policy"}
+          image: narea/trust-service:1.0.224 # {"$imagepolicy": "flux-system:trust-policy"}
           ports:
             - containerPort: 8080
           env:
