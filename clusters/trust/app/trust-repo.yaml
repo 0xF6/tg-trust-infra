@@ -7,5 +7,5 @@ metadata:
 spec:
   secretRef:
     name: regcred
-  image: narea/trust-service
+  image: docker.io/narea/trust-service
   interval: 30s
