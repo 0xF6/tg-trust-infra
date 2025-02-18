@@ -1,11 +1,11 @@
-#---
-#apiVersion: image.toolkit.fluxcd.io/v1beta2
-#kind: ImageRepository
-#metadata:
-#  name: trust-repo
-#  namespace: flux-system
-#spec:
-#  secretRef:
-#    name: regcred
-#  image: narea/trust-service
-#  interval: 30s
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: trust-repo
+  namespace: flux-system
+spec:
+  secretRef:
+    name: regcred
+  image: narea/trust-service
+  interval: 30s
