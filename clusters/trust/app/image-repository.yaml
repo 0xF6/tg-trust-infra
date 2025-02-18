@@ -7,4 +7,4 @@
 #  image: narea/trust-service
 #  interval: 1m
 #  secretRef:
-#    name: dockerhub-secret
+#    name: regcred
